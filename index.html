@@ -260,7 +260,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-25T17:47:51+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-25T17:55:44+08:00">
                 2018-01-25
               </time>
             
@@ -303,8 +303,9 @@
             <p>文件开头需要写上声明“#!/usr/bin/env python3”(不写3，默认执行电脑中存在的2.7版本)</p>
 <p>新建.py文件后，在shell中 输入python xx.py运行，也可以输入 chmod a+x xx.py 回车，再通过 ./xx.py运行</p>
 <h2 id="初体验遇到的问题"><a href="#初体验遇到的问题" class="headerlink" title="初体验遇到的问题"></a>初体验遇到的问题</h2><p>最直观的感受是不用写分号，没有“{}”,用缩进代表，这一点经常因为缩进不正确而报错。</p>
-<p>错误的使用缩进量。（导致“IndentationError：unexpected indent”、“IndentationError：unindent does not match any outer indetation level”以及“IndentationError：expected an indented block”）</p>
-<p>忘记在 if , elif , else , for , while , class ,def 声明末尾添加 ：（导致 “SyntaxError ：invalid syntax”）<br><code>elif是else if的意思，for,while都可使用else</code></p>
+<h3 id="错误的使用缩进量"><a href="#错误的使用缩进量" class="headerlink" title="错误的使用缩进量"></a>错误的使用缩进量</h3><p><em>（导致“IndentationError：unexpected indent”、“IndentationError：unindent does not match any outer indetation level”以及“IndentationError：expected an indented block”）</em></p>
+<h3 id="忘记在-if-elif-else-for-while-class-def-声明末尾添加-“-”"><a href="#忘记在-if-elif-else-for-while-class-def-声明末尾添加-“-”" class="headerlink" title="忘记在 if , elif , else , for , while , class ,def 声明末尾添加 “:”"></a>忘记在 if , elif , else , for , while , class ,def 声明末尾添加 “:”</h3><p><em>（导致 “SyntaxError ：invalid syntax”）</em></p>
+<p><code>elif是else if的意思，for,while都可使用else</code></p>
 <h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><blockquote>
 <p>单行注释·前加“#”，多行注释用’’‘括起来 如：’’’注释掉内容’’’<br>print–打印，input–输入</p>
 </blockquote>
@@ -320,21 +321,23 @@
 <blockquote>
 <p>引入文件import，会先在本地查找，再到存放python文件的地址查找，所以自己建的名字与本身存在文件的名字相同，容易引起错误。</p>
 </blockquote>
-<p>输入密码时密码不可见 需引入“getpass” 使用时为：password=getpass.getpass(“password:”)–&gt;显示为：password:(需输入内容),eg<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">password=getpass.getpass(<span class="string">"password:"</span>)</span><br></pre></td></tr></table></figure></p>
+<p>输入密码时密码不可见 需引入“getpass” 使用时为：password=getpass.getpass(“password:”)–&gt;显示为：password:(需输入内容),eg:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">password=getpass.getpass(<span class="string">"password:"</span>)</span><br></pre></td></tr></table></figure></p>
 <p>isdigit() 检测字符串是否只由数字组成,eg:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">num.isdigit()</span><br></pre></td></tr></table></figure></p>
-<h2 id="克隆"><a href="#克隆" class="headerlink" title="克隆"></a>克隆</h2><p> names2=names.copy()，names2=list(names),names2=names[:]皆为浅克隆；<br> 若要深克隆 需引入“copy”,使用时为:names2=copy.deepcopy(names)；<br> 引入copy后，也可使用copy进行浅克隆，如：names2=copy.copy(names)；</p>
+<h2 id="克隆"><a href="#克隆" class="headerlink" title="克隆"></a>克隆</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">names2=names.copy()</span><br><span class="line">names2=list(names),names2=names[:]</span><br><span class="line">皆为浅克隆；</span><br></pre></td></tr></table></figure>
+<p> 若要深克隆 需引入“copy”,使用时为:<br> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">names2=copy.deepcopy(names)；</span><br></pre></td></tr></table></figure></p>
+<p> 引入copy后，也可使用copy进行浅克隆，如：<br> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">names2=copy.copy(names)；</span><br></pre></td></tr></table></figure></p>
 <h2 id="列表分两种"><a href="#列表分两种" class="headerlink" title="列表分两种"></a>列表分两种</h2><h3 id="a-list-“xx”-”xx”-”xx”-”xx”-–-gt-可通过append-insert-remove-del-pop-clear-reverse-sort-count-index等来操作"><a href="#a-list-“xx”-”xx”-”xx”-”xx”-–-gt-可通过append-insert-remove-del-pop-clear-reverse-sort-count-index等来操作" class="headerlink" title="a)list=[“xx”,”xx”,”xx”,”xx”]–&gt;可通过append, insert, remove, del, pop, clear, reverse, sort, count, index等来操作"></a>a)list=[“xx”,”xx”,”xx”,”xx”]–&gt;可通过append, insert, remove, del, pop, clear, reverse, sort, count, index等来操作</h3><ul>
-<li><p>list.append(“xx”)=&gt;向list列表最后一位添加“xx”，</p>
+<li><p>list.append(“xx”)=&gt;向list列表最后一位添加“xx”;</p>
 </li>
-<li><p>list.insert(n,”xx”)=&gt;在list列表中下标为n的位置上添加“xx”，</p>
+<li><p>list.insert(n,”xx”)=&gt;在list列表中下标为n的位置上添加“xx”;</p>
 </li>
-<li><p>list.remove(“xx”)=&gt;移除list列表中的“xx”，</p>
+<li><p>list.remove(“xx”)=&gt;移除list列表中的“xx”;</p>
 </li>
-<li><p>del list[n]，list.pop(n)=&gt;移除list列表中下标为n的值，其中pop后括号后若不写值移除最后一位，</p>
+<li><p>del list[n]，list.pop(n)=&gt;移除list列表中下标为n的值，其中pop后括号后若不写值移除最后一位;</p>
 </li>
-<li><p>list.clear(),list.reverse(),list.sort()=&gt;意为清空，翻转，排序，</p>
+<li><p>list.clear(),list.reverse(),list.sort()=&gt;意为清空，翻转，排序;</p>
 </li>
-<li><p>list.count(‘xx’),list.index(‘xx’)=&gt;查询‘xx’在列表list中的位置，</p>
+<li><p>list.count(‘xx’),list.index(‘xx’)=&gt;查询‘xx’在列表list中的位置;</p>
 </li>
 </ul>
 <h3 id="b-list-“xx”-”xx”-”xx”-”xx”-–-gt-列表中的值不可改变，只可通过count-index来操作。"><a href="#b-list-“xx”-”xx”-”xx”-”xx”-–-gt-列表中的值不可改变，只可通过count-index来操作。" class="headerlink" title="b)list=(“xx”,”xx”,”xx”,”xx”)–&gt;列表中的值不可改变，只可通过count,index来操作。"></a>b)list=(“xx”,”xx”,”xx”,”xx”)–&gt;列表中的值不可改变，只可通过count,index来操作。</h3><blockquote>
