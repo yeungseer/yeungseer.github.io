@@ -229,6 +229,268 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.yeungseer.com/2018/01/26/Python 处理字符串/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ys">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yeungSeer">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/26/Python 处理字符串/" itemprop="url">Python 处理字符串</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-26T18:37:26+08:00">
+                2018-01-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>name=’my \tname is yeung{name}’</p>
+<h2 id="C"><a href="#C" class="headerlink" title="C"></a>C</h2><h3 id="capitalize"><a href="#capitalize" class="headerlink" title="capitalize"></a>capitalize</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name.capitalize() <span class="comment">#首字母大写</span></span><br></pre></td></tr></table></figure>
+<p>My     name is yeung{name}</p>
+</blockquote>
+<h3 id="count"><a href="#count" class="headerlink" title="count"></a>count</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name.count(<span class="string">'y'</span>)  <span class="comment">#含有'y'的数量</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>2</p>
+</blockquote>
+<h3 id="center"><a href="#center" class="headerlink" title="center"></a>center</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name.center(<span class="number">50</span>,<span class="string">"-"</span>) <span class="comment"># 一共打印50个字符，把name放中间，不够的用"-"补上</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>————-my     name is yeung{name}————–</p>
+<h2 id="E"><a href="#E" class="headerlink" title="E"></a>E</h2><h3 id="endswith"><a href="#endswith" class="headerlink" title="endswith"></a>endswith</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name.endswith(<span class="string">"ng"</span>) <span class="comment"># 判断字符串以什么结尾，对了返回true</span></span><br></pre></td></tr></table></figure>
+<p>False</p>
+</blockquote>
+<h3 id="expandtabs"><a href="#expandtabs" class="headerlink" title="expandtabs"></a>expandtabs</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name.expandtabs(tabsize=<span class="number">30</span>) <span class="comment">#tab键转化为多少个空格</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>my                            name is yeung{name}</p>
+</blockquote>
+<h2 id="F"><a href="#F" class="headerlink" title="F"></a>F</h2><h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name.find(<span class="string">"y"</span>) <span class="comment">#从左边找字符串中'y'的索引</span></span><br><span class="line">name[name.find(<span class="string">"name"</span>):]</span><br><span class="line"><span class="comment">#字符串与列表一样可以切片</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>1 | name is yeung{name}</p>
+</blockquote>
+<h3 id="format"><a href="#format" class="headerlink" title="format"></a>format</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name.format(name=<span class="string">'seer'</span>)</span><br><span class="line">name.format_map(&#123;<span class="string">'name'</span>:<span class="string">'seer'</span>&#125;)</span><br><span class="line"><span class="comment">#&#123;name&#125;变为seer</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>my     name is yeungseer</p>
+</blockquote>
+<h2 id="I"><a href="#I" class="headerlink" title="I"></a>I</h2><h3 id="isalnum"><a href="#isalnum" class="headerlink" title="isalnum"></a>isalnum</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'ab12A '</span>.isalnum() <span class="comment">#阿拉伯字符，包含英文+数字</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>False</p>
+</blockquote>
+<h3 id="isalpha"><a href="#isalpha" class="headerlink" title="isalpha"></a>isalpha</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'abA'</span>.isalpha()<span class="comment">#纯英文字符</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>True</p>
+</blockquote>
+<h3 id="isdecimal"><a href="#isdecimal" class="headerlink" title="isdecimal"></a>isdecimal</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'123'</span>.isdecimal()<span class="comment">#是否为十进制的数</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>True</p>
+</blockquote>
+<h3 id="isdigit"><a href="#isdigit" class="headerlink" title="isdigit"></a>isdigit</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'12'</span>.isdigit()<span class="comment">#是否为整数(常用)</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>True</p>
+</blockquote>
+<h3 id="isidentifier"><a href="#isidentifier" class="headerlink" title="isidentifier"></a>isidentifier</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'A1'</span>.isidentifier()<span class="comment">#判断是不是一个合法的标识符(变量名)</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>True</p>
+</blockquote>
+<h3 id="islower"><a href="#islower" class="headerlink" title="islower"></a>islower</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'a 1\t'</span>.islower()<span class="comment">#判断是不是小写</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>True</p>
+</blockquote>
+<h3 id="isnumeric"><a href="#isnumeric" class="headerlink" title="isnumeric"></a>isnumeric</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'112.22'</span>.isnumeric()<span class="comment">#判断是不是只有数字，小数也不行</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>False</p>
+</blockquote>
+<h3 id="isspace"><a href="#isspace" class="headerlink" title="isspace"></a>isspace</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">' '</span>.isspace()<span class="comment">#判断是不是一个空格</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>True</p>
+</blockquote>
+<h3 id="istitle"><a href="#istitle" class="headerlink" title="istitle"></a>istitle</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'My Name Is'</span>.istitle()<span class="comment">#首字母都大写 返回true</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>True</p>
+</blockquote>
+<h3 id="isprintable"><a href="#isprintable" class="headerlink" title="isprintable"></a>isprintable</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'my name is'</span>.isprintable()<span class="comment">#是否可以打印 tty file,drive file不可打印</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>True</p>
+</blockquote>
+<h3 id="isupper"><a href="#isupper" class="headerlink" title="isupper"></a>isupper</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'NAME'</span>.isupper()<span class="comment">#判断是不是大写</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>True</p>
+</blockquote>
+<h2 id="J"><a href="#J" class="headerlink" title="J"></a>J</h2><h3 id="join"><a href="#join" class="headerlink" title="join"></a>join</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'+'</span>.join([<span class="string">'1'</span>,<span class="string">'2'</span>,<span class="string">'3'</span>,<span class="string">'4'</span>])<span class="comment">#1+2+3+4</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>1+2+3+4</p>
+</blockquote>
+<h2 id="L"><a href="#L" class="headerlink" title="L"></a>L</h2><h3 id="ljust"><a href="#ljust" class="headerlink" title="ljust"></a>ljust</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name.ljust(<span class="number">50</span>,<span class="string">'*'</span>)<span class="comment">#长度50，左边用'*'补上</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>my     name is yeung{name}<strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></p>
+</blockquote>
+<h3 id="lower"><a href="#lower" class="headerlink" title="lower"></a>lower</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'Name'</span>.lower()<span class="comment">#把大写变成小写</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>name</p>
+</blockquote>
+<h3 id="lstrip"><a href="#lstrip" class="headerlink" title="lstrip"></a>lstrip</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">' Name '</span>.lstrip()<span class="comment">#从左边去空格／回车</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Name</p>
+</blockquote>
+<h2 id="R"><a href="#R" class="headerlink" title="R"></a>R</h2><h3 id="rjust"><a href="#rjust" class="headerlink" title="rjust"></a>rjust</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name.rjust(<span class="number">50</span>,<span class="string">'*'</span>)<span class="comment">#长度50，右边用'*'补上</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong>my     name is yeung{name}</p>
+</blockquote>
+<h3 id="rstrip"><a href="#rstrip" class="headerlink" title="rstrip"></a>rstrip</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">' Name '</span>.rstrip()<span class="comment">#从右边去空格／回车</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p> Name</p>
+</blockquote>
+<h3 id="replace"><a href="#replace" class="headerlink" title="replace"></a>replace</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'yeungseer'</span>.replace(<span class="string">'e'</span>,<span class="string">'E'</span>,<span class="number">1</span>)<span class="comment">#替换，数字表示替换的数量</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>yEungseer</p>
+</blockquote>
+<h3 id="rfind"><a href="#rfind" class="headerlink" title="rfind"></a>rfind</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'yeungseer'</span>.rfind(<span class="string">'e'</span>)<span class="comment">#找到最右边的值的下标</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>7</p>
+</blockquote>
+<h3 id="rsplit"><a href="#rsplit" class="headerlink" title="rsplit"></a>rsplit</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> (<span class="string">'yeung seer'</span>.rsplit(<span class="string">'e'</span>,<span class="number">1</span>))<span class="comment">#把字符串从右边按照规则分割为列表</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>[‘yeung se’, ‘r’]</p>
+</blockquote>
+<h2 id="S"><a href="#S" class="headerlink" title="S"></a>S</h2><h3 id="strip"><a href="#strip" class="headerlink" title="strip"></a>strip</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">' Name '</span>.strip()<span class="comment">#从两边去空格／回车</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Name</p>
+</blockquote>
+<h3 id="split"><a href="#split" class="headerlink" title="split"></a>split</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'yeung seer'</span>.split(<span class="string">' '</span>)<span class="comment">#把字符串按照规则分割为列表</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>[‘yeung’, ‘seer’]</p>
+</blockquote>
+<h3 id="splitlines"><a href="#splitlines" class="headerlink" title="splitlines"></a>splitlines</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'yeung\nseer'</span>.splitlines()<span class="comment">#把字符串按照换行分割为列表</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>[‘yeung’, ‘seer’]</p>
+</blockquote>
+<h3 id="swapcase"><a href="#swapcase" class="headerlink" title="swapcase"></a>swapcase</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'yeungSeer'</span>.swapcase()<span class="comment">#大小写互换</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>YEUNGsEER</p>
+</blockquote>
+<h3 id="startswith"><a href="#startswith" class="headerlink" title="startswith"></a>startswith</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name.startswith(<span class="string">"m"</span>) <span class="comment"># 判断字符串以什么开始，对了返回true</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>True</p>
+</blockquote>
+<h2 id="T"><a href="#T" class="headerlink" title="T"></a>T</h2><h3 id="translate"><a href="#translate" class="headerlink" title="translate"></a>translate</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p=str.maketrans(<span class="string">"abcdef"</span>,<span class="string">"123456"</span>)</span><br><span class="line"><span class="string">"yeungseer"</span>.translate(p)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>y5ungs55r</p>
+</blockquote>
+<h3 id="title"><a href="#title" class="headerlink" title="title"></a>title</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'yeung Seer'</span>.title()<span class="comment">#变成title 首字母大写</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Yeung Seer</p>
+</blockquote>
+<h2 id="U"><a href="#U" class="headerlink" title="U"></a>U</h2><h3 id="upper"><a href="#upper" class="headerlink" title="upper"></a>upper</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'Name'</span>.upper()<span class="comment">#把小写变成大写</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>NAME</p>
+</blockquote>
+<h2 id="Z"><a href="#Z" class="headerlink" title="Z"></a>Z</h2><h3 id="zfill"><a href="#zfill" class="headerlink" title="zfill"></a>zfill</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'yeung'</span>.zfill(<span class="number">50</span>)<span class="comment">#一共50个字符，不够在前边补0</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>000000000000000000000000000000000000000000000yeung</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.yeungseer.com/2018/01/25/Python 初学知识点总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -758,7 +1020,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
