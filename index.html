@@ -229,6 +229,129 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.yeungseer.com/2018/04/11/webpack+vue问题汇总/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ys">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yeungSeer">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/11/webpack+vue问题汇总/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-11T17:25:15+08:00">
+                2018-04-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<h2 id="title-webpack-vue-问题汇总"><a href="#title-webpack-vue-问题汇总" class="headerlink" title="title:webpack+vue 问题汇总"></a>title:webpack+vue 问题汇总</h2><h1 id="…mapActions-‘xxx’"><a href="#…mapActions-‘xxx’" class="headerlink" title="…mapActions([‘xxx’])"></a>…mapActions([‘xxx’])</h1><blockquote>
+<p>当这样使用mapxxx时报错，解决方案为：<br>   <em>可以安装整个stage2的预置器或者安装 Object Rest Operator 的babel插件 babel-plugin-transform-object-rest-spread</em><br>   我选择了安装插件，接着在babel的配置文件 .babelrc 中应用插件：<br>babel: {<br>presets: [‘es2015’],<br>plugins: [‘transform-runtime’,’transform-object-rest-spread’]<br>}</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.yeungseer.com/2018/04/11/常用命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -260,7 +383,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-11T15:25:33+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-11T17:22:54+08:00">
                 2018-04-11
               </time>
             
@@ -314,6 +437,7 @@
 <p>进入文件夹点就o修改文件内容，修改完成后按esc再输入:wq 保存退出</p>
 </blockquote>
 <h1 id="查找端口号-以及-删除"><a href="#查找端口号-以及-删除" class="headerlink" title="查找端口号 以及 删除"></a>查找端口号 以及 删除</h1><p><code>sudo losf -i </code>  查找该端口号被哪个占用<br><code>sudo kill -9 </code>    删除占用该端口号的进程</p>
+<h1 id="node-webpack"><a href="#node-webpack" class="headerlink" title="node webpack"></a>node webpack</h1><p>package.json    <code>npm init</code><br>开发环境安装模块   <code>npm install xxxxx --save-dev</code><br>开发环境卸载模块   <code>npm uninstall xxxxx --save-dev</code><br>生产环境安装模块   <code>npm install xxxxx --save</code><br>生产环境卸载模块   <code>npm uninstall xxxxx --save</code></p>
 
           
         
@@ -1157,7 +1281,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
