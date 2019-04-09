@@ -260,7 +260,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-09T16:37:44+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-09T18:00:10+08:00">
                 2019-04-09
               </time>
             
@@ -301,7 +301,15 @@
         
           
             <blockquote>
-<p>字典是无序的,不能用’.’操作<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">info=&#123;</span><br><span class="line">    <span class="string">"stu1101"</span>:<span class="string">"zhangsan"</span>,</span><br><span class="line">    <span class="string">"stu1102"</span>:<span class="string">"zhangsanfeng"</span>,</span><br><span class="line">    <span class="string">"stu1103"</span>:<span class="string">"zhaomin"</span>,</span><br><span class="line">    <span class="string">"stu1104"</span>:<span class="string">"zhouzhiruo"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>字典是无序的,不能用’.’操作</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">info=&#123;</span><br><span class="line">    <span class="string">"stu1101"</span>:<span class="string">"zhangsan"</span>,</span><br><span class="line">    <span class="string">"stu1102"</span>:<span class="string">"zhangsanfeng"</span>,</span><br><span class="line">    <span class="string">"stu1103"</span>:<span class="string">"zhaomin"</span>,</span><br><span class="line">    <span class="string">"stu1104"</span>:<span class="string">"zhouzhiruo"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="增删改查"><a href="#增删改查" class="headerlink" title="增删改查"></a>增删改查</h1><h2 id="增"><a href="#增" class="headerlink" title="增"></a>增</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">info[<span class="string">"stu1105"</span>]=<span class="string">'test'</span></span><br></pre></td></tr></table></figure>
+<h2 id="删"><a href="#删" class="headerlink" title="删"></a>删</h2><h3 id="del"><a href="#del" class="headerlink" title="del"></a>del</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">del</span> info[<span class="string">"stu1101"</span>]</span><br></pre></td></tr></table></figure>
+<h3 id="pop"><a href="#pop" class="headerlink" title="pop"></a>pop</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">info.pop(<span class="string">"stu1101"</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="popitem"><a href="#popitem" class="headerlink" title="popitem()"></a>popitem()</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">info.popitem()</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>随机删掉一个键值，虽然经试验总是删掉最后一个，但是它并不保证删除的顺序</p>
 </blockquote>
 
           
